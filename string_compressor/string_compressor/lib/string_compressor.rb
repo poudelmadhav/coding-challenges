@@ -1,6 +1,6 @@
 def string_compressor(string)
-	str = string.chars.chunk{|x| x}.map{|(a,b)| "#{a}#{b.length}" }.join
-	str.length > string.length ? string : str		
+	compressed = string.chars.chunk{|x| x}.map{|(a,b)| "#{a}#{b.length}" }.join
+	compressed.length > string.length ? string : compressed		
 end
 
 print string_compressor("aabccaaa")

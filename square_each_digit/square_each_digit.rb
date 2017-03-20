@@ -1,8 +1,6 @@
 def square_each_digit num
   if num.is_a? Numeric
-    ary = Array.new
-    num.to_s.split("").each { |n| ary.push(n.to_i.abs2.to_s)}
-    ary.join.to_i
+    num.to_s.split("").map { |n| n.to_i.abs2.to_s}.join.to_i
   else
     'NaN'
   end
